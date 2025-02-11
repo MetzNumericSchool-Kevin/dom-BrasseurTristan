@@ -14,4 +14,22 @@ rogers_joke.remove();
 
 // Archibald n'est pas là, appelons le !
 const event_listener = document.getElementById('call_archibald');
-document.addEventListener('click', () => { alert(`🧙‍♂️ J'arrive, j'arrive Aventurier !`) })
+event_listener.addEventListener('click', () => { alert(`🧙‍♂️ J'arrive, j'arrive Aventurier !`) })
+
+// Faisons un peu de magie 🪄
+
+const all_btn = document.querySelectorAll("div.boite");
+const red_btn = document.getElementById('btn_change_red');
+const blue_btn = document.getElementById('btn_change_blue');
+const green_btn = document.getElementById('btn_change_green');
+console.log(all_btn);
+red_btn.addEventListener('click', () => { all_btn[0].style.backgroundColor = 'red' })
+blue_btn.addEventListener('click', () => {
+    all_btn[0].style.backgroundColor = 'blue';
+    all_btn[1].style.backgroundColor = 'blue'
+})
+green_btn.addEventListener('click', () => {
+    all_btn.forEach(element => {
+        element.style.backgroundColor = 'green';
+    })
+})
