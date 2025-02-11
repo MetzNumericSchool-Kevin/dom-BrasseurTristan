@@ -11,3 +11,7 @@ description_div.appendChild(description_p);
 // Roger, enfoiré !
 const rogers_joke = document.getElementById('blague_de_roger_le_sorcier');
 rogers_joke.remove();
+
+// Archibald n'est pas là, appelons le !
+const event_listener = document.getElementById('call_archibald');
+document.addEventListener('click', () => { alert(`🧙‍♂️ J'arrive, j'arrive Aventurier !`) })
